@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A4 - Arte en Canvas</title>
+</head>
+
+<body>
+
+    <h1>A4 - Arte en Canvas</h1>
+
+    <canvas id="miCanvas" width="600" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Cielo
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(0, 0, 600, 350);
+
+        // Pasto
+        ctx.fillStyle = "lightgreen";
+        ctx.fillRect(0, 350, 600, 150);
+
+        // Casa
+        ctx.fillStyle = "pink";
+        ctx.fillRect(200, 200, 220, 200);
+
+        // Techo hecho con rectángulos
+        ctx.fillStyle = "brown";
+        ctx.fillRect(180, 170, 260, 40);
+        ctx.fillRect(200, 150, 220, 20);
+        ctx.fillRect(230, 130, 160, 20);
+
+        // Puerta
+        ctx.fillStyle = "brown";
+        ctx.fillRect(285, 310, 55, 90);
+
+        // Ventana izquierda
+        ctx.fillStyle = "white";
+        ctx.fillRect(225, 245, 55, 55);
+
+        // Ventana derecha
+        ctx.fillStyle = "white";
+        ctx.fillRect(345, 245, 55, 55);
+
+        // Sol hecho con cuadrados
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(60, 50, 80, 80);
+        ctx.fillRect(45, 65, 110, 50);
+        ctx.fillRect(75, 35, 50, 110);
+
+        // Camino
+        ctx.fillStyle = "gray";
+        ctx.fillRect(275, 400, 75, 100);
+
+    </script>
+
+</body>
+</html>
