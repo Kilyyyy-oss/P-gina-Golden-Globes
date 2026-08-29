@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A4 - Animación en Canvas</title>
+</head>
+
+<body>
+
+    <h1>A4 - Animación básica</h1>
+
+    <canvas id="miCanvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let x = 0;
+
+        function animar() {
+
+            // Limpiar el canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Fondo
+            ctx.fillStyle = "lightblue";
+            ctx.fillRect(0, 0, 600, 400);
+
+            // Cuadro animado
+            ctx.fillStyle = "purple";
+            ctx.fillRect(x, 170, 80, 80);
+
+            // Mover el cuadro
+            x = x + 2;
+
+            // Volver al inicio
+            if (x > 600) {
+                x = -80;
+            }
+
+            requestAnimationFrame(animar);
+        }
+
+        animar();
+    </script>
+
+</body>
+</html>
